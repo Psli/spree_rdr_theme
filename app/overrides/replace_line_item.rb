@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 Deface::Override.new(:virtual_path => %q{orders/_line_item},
                           :name => %q{replace_line_item},
                           :replace => %q{tr},
