@@ -57,14 +57,8 @@ Deface::Override.new(:virtual_path => %q{layouts/spree_application},
           <p>
           020-8721220<br>
           <a href="mailto:sales@oyboss.com">sales@oyboss.com</a>
-          </p>
-        </div>
-
-        <div id="menu">
-          <h3>Menu</h3>
-          <p>
-          <a href="/about">关于</a><br />
-          <a href="/privacy">服务条款</a>
+          <br />
+          广州荔湾区新亚洲电子数码城0912室
           </p>
         </div>
 
