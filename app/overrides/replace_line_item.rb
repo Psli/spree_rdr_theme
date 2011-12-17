@@ -31,6 +31,6 @@ Deface::Override.new(:virtual_path => %q{orders/_line_item},
     <%= format_price(product_price(line_item, :format_as_currency => false) * line_item.quantity) unless line_item.quantity.nil? %>
   </td>
   <td class="total" data-hook="cart_item_delete">
-    <%= link_to("删除", '#', :class => 'delete button') %>
+    <%= link_to("删除", '#', :class => 'button delete') %>
   </td>
 </tr>})

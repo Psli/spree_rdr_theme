@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 Deface::Override.new(:virtual_path => %q{checkout/registration},
                           :name => %q{replace_checkout_registration},
                           :replace => %q{#registration},
@@ -24,7 +26,7 @@ Deface::Override.new(:virtual_path => %q{checkout/registration},
 
       <hr>
 
-	    <%= render :template => 'user_registrations/new' %>
+      <%= render :template => 'user_registrations/new' %>
     </div>
   </div>
   <!-- END MAIN CONTENT -->
