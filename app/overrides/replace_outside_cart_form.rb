@@ -1,10 +1,12 @@
+# encoding: utf-8
+
 Deface::Override.new(:virtual_path => %q{orders/edit},
                           :name => %q{replace_outside_cart_form},
                           :replace => %q{[data-hook='outside_cart_form']},
                           :closing_selector => %q{},
                           :text => %q{<%= form_for(@order, :url => update_cart_path, :html=>{:id=>'updatecart'}) do |order_form| %>
 
-    <h3>You have <%= pluralize @order.line_items.length, 'item' %> in your cart</h3>
+    <h3>你的购物车有 <%= pluralize @order.line_items.length, '项' %> </h3>
 
     <div data-hook="cart_items">
       <%= render :partial => 'form', :locals => {:order_form => order_form} %>
