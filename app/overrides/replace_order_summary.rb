@@ -19,7 +19,7 @@ Deface::Override.new(:virtual_path => %q{checkout/_summary},
 
     <table class="total">
       <tr>
-        <th>Subtotal</th>
+        <th>小计</th>
         <td><%= number_to_currency @order.item_total %></td>
       </tr>
       <% @order.adjustments.each do |adjustment| %>
@@ -29,7 +29,7 @@ Deface::Override.new(:virtual_path => %q{checkout/_summary},
         </tr>
       <% end %>
       <tr class="total">
-        <th>Total</th>
+        <th>总计</th>
         <td><%= number_to_currency @order.total %></td>
       </tr>
     </table>
