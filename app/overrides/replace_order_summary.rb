@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 Deface::Override.new(:virtual_path => %q{checkout/_summary},
                           :name => %q{replace_order_summary'},
                           :replace => %q{[data-hook='order_summary']},
