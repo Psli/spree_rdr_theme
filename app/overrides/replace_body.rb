@@ -62,8 +62,7 @@ Deface::Override.new(:virtual_path => %q{layouts/spree_application},
           </p>
         </div>
 
-        <p id="copyright">&copy; Copyright <%= Time.zone.now.year %> OyBoss.com All rights reserved</p>
-
+        <p id="copyright">&copy; Copyright <%= Time.zone.now.year %> OyBoss.com All rights reserved&nbsp;&nbsp;</p>
       </div>
     </div>
 </body>})
