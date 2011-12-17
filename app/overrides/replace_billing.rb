@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 Deface::Override.new(:virtual_path => %q{checkout/_address},
                           :name => %q{replace_billing},
                           :replace => %q{#billing[data-hook]},
@@ -5,8 +7,8 @@ Deface::Override.new(:virtual_path => %q{checkout/_address},
   <%= javascript_include_tag 'checkout', '/states' %>
 <% end %>
 
-<div id="content" role="content">
-  <h2>Your Billing Information</h2>
+<div id="content" role="content" class="content">
+  <h2>你的支付信息</h2>
   <%= form.fields_for :bill_address do |bill_form| %>
     <div id="billing">
     <ul class="inner fields">
