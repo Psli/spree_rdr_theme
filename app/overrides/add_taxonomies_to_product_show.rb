@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 Deface::Override.new(:virtual_path => %q{products/show},
                      :name => %q{add_taxonomies_to_product_show},
                      :insert_after => %q{[data-hook='product_show']},

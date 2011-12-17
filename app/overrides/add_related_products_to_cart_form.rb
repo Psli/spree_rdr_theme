@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 if Rails.application.railties.all.map(&:railtie_name).include? "spree_related_products"
 
   Deface::Override.new(:virtual_path => %q{products/show},

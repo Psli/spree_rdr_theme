@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 Deface::Override.new(:virtual_path => %q{layouts/spree_application},
                           :name => %q{replace_body},
                           :replace => %q{[data-hook='body']},

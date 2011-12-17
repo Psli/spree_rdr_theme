@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 Deface::Override.new(:virtual_path => %q{shared/_head},
                           :name => %q{add_to_head},
                           :insert_after => %q{code[erb-loud]:contains('stylesheet_link_tag')},
