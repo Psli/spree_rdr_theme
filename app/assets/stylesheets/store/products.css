@@ -28,11 +28,11 @@ body#product-details #product-description {
 
 #product-images #thumbnails ul {
   list-style: none;
-  background-color: #ff0;
+  background-color: #fff;
 }
 
 #product-images #thumbnails li {
-  background-color: #0ff;
+  background-color: #fff;
 }
 
 #product-images #thumbnails li a {

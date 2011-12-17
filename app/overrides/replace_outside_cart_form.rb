@@ -6,7 +6,7 @@ Deface::Override.new(:virtual_path => %q{orders/edit},
                           :closing_selector => %q{},
                           :text => %q{<%= form_for(@order, :url => update_cart_path, :html=>{:id=>'updatecart'}) do |order_form| %>
 
-    <h3>你的购物车有 <%= pluralize @order.line_items.length, '项' %> </h3>
+    <h3>你的购物车有 <%= @order.line_items.length %> 项</h3>
 
     <div data-hook="cart_items">
       <%= render :partial => 'form', :locals => {:order_form => order_form} %>
