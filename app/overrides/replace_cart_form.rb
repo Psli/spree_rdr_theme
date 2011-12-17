@@ -4,17 +4,17 @@ Deface::Override.new(:virtual_path => %q{products/show},
                           :closing_selector => %q{},
                           :text => %q{<div id="cart-form" data-hook="cart_form">
     <%= form_for :order, :url => populate_orders_url do |f| %>
-    
+
       <% if product_price(@product) %>
         <%= hidden_field_tag (@product.has_variants? ? :quantity : "variants[#{@product.master.id}]"), 1, :class => "title", :size => 3 %>
-    
+
         <dl class="part-numbers clearfix">
           <dt>PART NUMBER</dt>
           <dd><%= @product.sku %></dd>
         </dl>
         <dl class="prices clearfix">
           <dt>Price</dt>
-          <dd><span class="price discounted"><%= number_to_currency @product.cost_price %></span></dd>
+          <dd><span class="price discounted"><%= number_to_currency @product.cost_price, :unit => "￥" %></span></dd>
           <dt>Sale Price</dt>
           <dd><span class="price selling"><%= product_price(@product) %></span></dd>
           <!-- #Coming soon
@@ -31,13 +31,13 @@ Deface::Override.new(:virtual_path => %q{products/show},
           <dd><span class="stock"><%= @product.has_stock? ? "YES" : "NO" %></span></dd>
         </dl>
         <hr />
-    
+
       <% end %>
 
-    
+
       <hr />
-    
-      <p><button type="submit">Add to cart</button></p>
+
+      <p><button type="submit">添加到购物车</button></p>
     <% end %>
 
 </div>},

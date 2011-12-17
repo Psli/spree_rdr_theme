@@ -17,9 +17,9 @@ Deface::Override.new(:virtual_path => %q{shared/_products},
       <div class="details">
         <p class="stock"><%= product.has_stock? ? "IN STOCK" : "OUT OF STOCK" %></p>
         <p class="prices">
-          <span class="price discounted"><%= number_to_currency(product.price * 1.2) %></span>&nbsp;
+          <span class="price discounted"><%= number_to_currency(product.price * 1.2, :unit => "￥") %></span>&nbsp;
           <span class="price selling"><%= product_price(product) %></span></p>
-        <p><%= link_to 'View More', product_path(product), :class => 'button' %></p>
+        <p><%= link_to '查看', product_path(product), :class => 'button' %></p>
       </div>
       <p class="description">
         <%= truncate strip_tags(product.description), :length => 300 %>

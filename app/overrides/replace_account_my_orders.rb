@@ -22,7 +22,7 @@ Deface::Override.new(:virtual_path => %q{users/show},
         <td class="normal"><%=order.created_at.to_date%></td>
         <td class="normal"><%= t(order.state).titleize %></td>
         <td class="normal"><%= order.shipment_state.capitalize %></td>
-        <td class="normal"><%= number_to_currency order.total %></td>
+        <td class="normal"><%= number_to_currency order.total, :unit => "￥" %></td>
       </tr>
     <% end %>
     </tbody>
