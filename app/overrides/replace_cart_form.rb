@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 Deface::Override.new(:virtual_path => %q{products/show},
                           :name => %q{replace_cart_form},
                           :replace => %q{[data-hook='cart_form']},
@@ -13,9 +15,9 @@ Deface::Override.new(:virtual_path => %q{products/show},
           <dd><%= @product.sku %></dd>
         </dl>
         <dl class="prices clearfix">
-          <dt>Price</dt>
+          <dt>市场价</dt>
           <dd><span class="price discounted"><%= number_to_currency @product.cost_price, :unit => "￥" %></span></dd>
-          <dt>Sale Price</dt>
+          <dt>本站会员价</dt>
           <dd><span class="price selling"><%= product_price(@product) %></span></dd>
           <!-- #Coming soon
             <dt>after $xx.00 rebate</dt>
@@ -23,8 +25,8 @@ Deface::Override.new(:virtual_path => %q{products/show},
           -->
         </dl>
         <dl class="shipping">
-          <dt>Shipping</dt>
-          <dd><span class="price">FREE</span></dd>
+          <dt>快递费</dt>
+          <dd><span class="price">免费</span></dd>
         </dl>
         <dl class="stock">
           <dt>In Stock</dt>
