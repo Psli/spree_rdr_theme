@@ -6,14 +6,14 @@ Deface::Override.new(:virtual_path => %q{layouts/spree_application},
                           :closing_selector => %q{},
                           :text => %q{<body id="<%= (@body_id == 'signup' ? 'checkout' : @body_id) || controller.controller_name %>">
     <div id="container">
-        <header>
+        <div class="header">
           <%= link_to image_tag("store/logo.gif", :width => "300", :height => "58", :alt => "Rails Dog Radio", :id => "logo"), root_url %>
           <form action="#" >
           </form>
           <%= form_tag products_url, :method => :get do %>
             <input type="search" id="s1" class="empty" name="keywords" placeholder="搜索产品">
           <% end %>
-          <nav>
+          <div class="nav">
             <%= link_to "产品", products_path %>
             <% if current_user %>
               <%= link_to t('my_account'), account_path, :class => "cart" %>
@@ -22,8 +22,8 @@ Deface::Override.new(:virtual_path => %q{layouts/spree_application},
               <%= link_to t('log_in'), login_path, :class => "cart" %>
             <% end %>
             <%= link_to_cart %>
-          </nav>
-        </header>
+          </div>
+        </div>
 
         <% if content_for?(:banner) %>
           <div id="banner" role="banner">
@@ -50,7 +50,7 @@ Deface::Override.new(:virtual_path => %q{layouts/spree_application},
 
     </div>
 
-    <footer data-hook="footer">
+    <div class="footer" data-hook="footer">
       <div class="inner">
         <div id="contact-us">
           <h3>联系我们</h3>
@@ -71,5 +71,5 @@ Deface::Override.new(:virtual_path => %q{layouts/spree_application},
         <p id="copyright">&copy; Copyright <%= Time.zone.now.year %> OyBoss.com All rights reserved</p>
 
       </div>
-    </footer>
+    </div>
 </body>})
